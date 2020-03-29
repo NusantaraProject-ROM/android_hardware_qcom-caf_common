@@ -37,6 +37,10 @@
 #include <log/log.h>
 #include <utils/misc.h>
 
+#ifndef NELEM
+#define NELEM(x) ((int) (sizeof(x) / sizeof((x)[0])))
+#endif
+
 #define VNDFWK_DETECT_LIB "libqti_vndfwk_detect.so"
 
 typedef struct dlHandler {
